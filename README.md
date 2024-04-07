@@ -1,5 +1,5 @@
 # Latest Updates
-Project latest updates can be found here: https://github.com/oiskenderov/hashicorp_stack
+Project can be found here: https://github.com/oiskenderov/hashicorp_stack
 
 # HashiQube Overview
 HashiQube is a VM or Docker Container with a Docker daemon inside. It runs all HashiCorp products. __Vault, Terraform, Nomad, Consul, Waypoint, Boundary, Vagrant, Packer and Sentinel.__
@@ -259,8 +259,8 @@ You are welcome to connect with me on Linkedin https://www.linkedin.com/in/orkha
 
 ## Contributors and Special mentions
 A Very special mention to HashiQube's contributors, Thank You All for your help, suggestions and contributions no matter how small <3
- - Nariman Huseynov
- - Ayaz Nazirov
+ - [Nariman Huseynov](https://www.linkedin.com/in/narimanh/)
+ - [Ayaz Nazirov](https://www.linkedin.com/in/ayaz-nazirov-69732a72/)
 
 ## License
 HashiQube is available as open-source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
