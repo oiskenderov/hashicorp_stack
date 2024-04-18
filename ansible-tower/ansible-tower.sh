@@ -16,12 +16,12 @@ sudo --preserve-env=PATH -u vagrant env | grep PATH
 
 # https://github.com/ansible/awx/blob/17.0.1/INSTALL.md#clone-the-repo
 echo -e '\e[38;5;198m'"++++ "
-echo -e '\e[38;5;198m'"++++ Clone https://github.com/ansible/awx.git into /opt/awx"
+echo -e '\e[38;5;198m'"++++ Clone https://github.com/ansible/awx into /opt/awx"
 echo -e '\e[38;5;198m'"++++ "
 sudo rm -rf /opt/awx
 sudo mkdir -p /opt/awx
 sudo chown -R vagrant:vagrant /opt/awx
-sudo --preserve-env=PATH -u vagrant git clone https://github.com/ansible/awx.git /opt/awx --depth 1 --branch 21.7.0
+sudo --preserve-env=PATH -u vagrant git clone https://github.com/ansible/awx-operator.git /opt/awx --depth 1 --branch devel
 
 cd /opt/awx
 
@@ -29,17 +29,17 @@ cd /opt/awx
 echo -e '\e[38;5;198m'"++++ "
 echo -e '\e[38;5;198m'"++++ Install Ansible and AWX dependencies with pip"
 echo -e '\e[38;5;198m'"++++ "
-sudo --preserve-env=PATH -u vagrant python -m pip install docker --quiet
-sudo --preserve-env=PATH -u vagrant python -m pip install docker-compose --quiet
-sudo --preserve-env=PATH -u vagrant python -m pip install ansible --quiet
-sudo --preserve-env=PATH -u vagrant python -m pip install ansible-lint --quiet
-sudo --preserve-env=PATH -u vagrant python -m pip install wheel --quiet
-sudo --preserve-env=PATH -u vagrant python -m pip install pywinrm --quiet
-sudo --preserve-env=PATH -u vagrant python -m pip install requests --quiet
-sudo --preserve-env=PATH -u vagrant python -m pip install docker --quiet
-sudo --preserve-env=PATH -u vagrant python -m pip install molecule --quiet
-sudo --preserve-env=PATH -u vagrant python -m pip install junit_xml --quiet
-sudo --preserve-env=PATH -u vagrant python -m pip install awxkit --quiet
+#sudo --preserve-env=PATH -u vagrant python3 -m pip install docker --quiet
+#sudo --preserve-env=PATH -u vagrant python3 -m pip install docker-compose --quiet
+sudo --preserve-env=PATH -u vagrant python3 -m pip install ansible --quiet
+sudo --preserve-env=PATH -u vagrant python3 -m pip install ansible-lint --quiet
+sudo --preserve-env=PATH -u vagrant python3 -m pip install wheel --quiet
+sudo --preserve-env=PATH -u vagrant python3 -m pip install pywinrm --quiet
+sudo --preserve-env=PATH -u vagrant python3 -m pip install requests --quiet
+sudo --preserve-env=PATH -u vagrant python3 -m pip install docker --quiet
+sudo --preserve-env=PATH -u vagrant python3 -m pip install molecule --quiet
+sudo --preserve-env=PATH -u vagrant python3 -m pip install junit_xml --quiet
+sudo --preserve-env=PATH -u vagrant python3 -m pip install awxkit --quiet
 
 # BUG: https://techfrontier.me.uk/post/finally-my-own-awx-server/
 # Back-off pulling image "quay.io/ansible/awx-ee:latest"
@@ -58,7 +58,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   # Find the latest tag here: https://github.com/ansible/awx-operator/releases
-  - github.com/ansible/awx-operator/config/default?ref=1.1.4
+  - github.com/ansible/awx-operator/config/default/
+  #- github.com/ansible/awx-operator/config/default?ref=1.1.4
 
 # Set the image tags to match the git version from above
 images:

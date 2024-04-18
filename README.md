@@ -115,12 +115,15 @@ Now you can use DNS like nomad.service.consul:9999 vault.service.consul:9999 via
 * [__Oracle MySQL__](database/#oracle-mysql) - MySQL is an open-source relational database management system (RDBMS)
 * [__Microsoft MSSQL__](database/#microsoft-sql-mssql-express) - Microsoft SQL Server is a relational database management system developed by Microsoft
 * [__PostgreSQL__](database/#postgresql) - PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.
+* [__Localstack__](localstack/#localstack) - A fully functional local AWS cloud stack
 * [__Minikube__](minikube/#minikube) - Minikube implements a local Kubernetes cluster on macOS, Linux, and Windows.
 * [__Newrelic Kubernetes Monitoring__](newrelic-kubernetes-monitoring/#newrelic-kubernetes-monitoring) - Monitor Kubernetes Clusters and Workloads with Newrelic
 * [__Docsify__](docsify/#docsify) - A magical documentation site generator
 * [__Ansible-Tower__](ansible-tower/#ansible-tower) - Is a web-based solution that makes Ansible even more easy to use for IT teams of all kinds. It’s designed to be the hub for all of your automation tasks.
 * [__Dbt__](dbt/#dbt) - Dbt is a data transformation tool that enables data analysts and engineers to transform, test and document data in the cloud data warehouse
 * [__Airflow__](apache-airflow/#apache-airflow) - Apache Airflow is an open-source workflow management platform for data engineering pipelines
+* [__Docsify__](hashicorp/#redis) - Redis queue efficiently manages asynchronous communication by allowing tasks or messages to be pushed in by producers and popped out by consumers for processing, leveraging Redis's fast in-memory storage and features like blocking operations.
+
 
 Once the stack is up you will have a large number of services running and available on `localhost` <br />
 For Documentation please open http://localhost:3333 in your browser
@@ -226,7 +229,7 @@ __Solution__ Ensure the following contents are present in `/etc/vbox/networks.co
 For suggestions, feedback and queries please branch or and submit a Pull Request or directly contact the architects of the HashiQube via email:
 
 DevOps Engineer / System Engineer [oiskenderov@gmail.com](mailto:oiskenderov@gmail.com)
-https://www.linkedin.com/in/riaannolan/
+https://www.linkedin.com/in/orkhan-iskandarov/
 
 ## About
 Hashiqube has been created to help Engineers, Developers and anyone who wants to practise, learn or demo Hashicorp products to get started quickly with a local lab. 
